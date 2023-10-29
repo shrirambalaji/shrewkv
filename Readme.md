@@ -1,4 +1,4 @@
-<img src="./.github/logo.png" />
+<img src="./.github/logo-rounded.png" />
 
 ---
 
