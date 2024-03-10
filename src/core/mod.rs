@@ -1,6 +1,8 @@
+#![allow(dead_code)]
+
 use std::collections::BTreeMap;
 
-pub mod struct ShrewDB<K, V>
+pub struct ShrewDB<K, V>
 where
     K: Ord,
 {
