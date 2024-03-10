@@ -1,0 +1,618 @@
+{
+  "tldrawFileFormatVersion": 1,
+  "schema": {
+    "schemaVersion": 1,
+    "storeVersion": 4,
+    "recordVersions": {
+      "asset": {
+        "version": 1,
+        "subTypeKey": "type",
+        "subTypeVersions": {
+          "image": 3,
+          "video": 3,
+          "bookmark": 1
+        }
+      },
+      "camera": {
+        "version": 1
+      },
+      "document": {
+        "version": 2
+      },
+      "instance": {
+        "version": 23
+      },
+      "instance_page_state": {
+        "version": 5
+      },
+      "page": {
+        "version": 1
+      },
+      "shape": {
+        "version": 3,
+        "subTypeKey": "type",
+        "subTypeVersions": {
+          "group": 0,
+          "text": 1,
+          "bookmark": 2,
+          "draw": 1,
+          "geo": 8,
+          "note": 5,
+          "line": 1,
+          "frame": 0,
+          "arrow": 2,
+          "highlight": 0,
+          "embed": 4,
+          "image": 3,
+          "video": 2
+        }
+      },
+      "instance_presence": {
+        "version": 5
+      },
+      "pointer": {
+        "version": 1
+      }
+    }
+  },
+  "records": [
+    {
+      "gridSize": 10,
+      "name": "",
+      "meta": {},
+      "id": "document:document",
+      "typeName": "document"
+    },
+    {
+      "id": "pointer:pointer",
+      "typeName": "pointer",
+      "x": 582.2053301435135,
+      "y": 637.7408610433324,
+      "lastActivityTimestamp": 1705850200618,
+      "meta": {}
+    },
+    {
+      "meta": {},
+      "id": "page:page",
+      "name": "Page 1",
+      "index": "a1",
+      "typeName": "page"
+    },
+    {
+      "x": 111.44039438883016,
+      "y": 62.01317469573138,
+      "z": 0.6650774432597096,
+      "meta": {},
+      "id": "camera:page:page",
+      "typeName": "camera"
+    },
+    {
+      "editingShapeId": null,
+      "croppingShapeId": null,
+      "selectedShapeIds": [],
+      "hoveredShapeId": "shape:2KorhGmPFGR6sYoseQ0YY",
+      "erasingShapeIds": [],
+      "hintingShapeIds": [],
+      "focusedGroupId": null,
+      "meta": {},
+      "id": "instance_page_state:page:page",
+      "pageId": "page:page",
+      "typeName": "instance_page_state"
+    },
+    {
+      "followingUserId": null,
+      "opacityForNextShape": 1,
+      "stylesForNextShape": {
+        "tldraw:horizontalAlign": "start",
+        "tldraw:font": "mono",
+        "tldraw:geo": "rectangle",
+        "tldraw:arrowheadEnd": "arrow",
+        "tldraw:size": "m",
+        "tldraw:color": "light-blue",
+        "tldraw:fill": "solid"
+      },
+      "brush": null,
+      "scribbles": [],
+      "cursor": {
+        "type": "default",
+        "rotation": 0
+      },
+      "isFocusMode": false,
+      "exportBackground": true,
+      "isDebugMode": false,
+      "isToolLocked": true,
+      "screenBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 469,
+        "h": 925
+      },
+      "zoomBrush": null,
+      "isGridMode": false,
+      "isPenMode": false,
+      "chatMessage": "",
+      "isChatting": false,
+      "highlightedUserIds": [],
+      "canMoveCamera": true,
+      "isFocused": true,
+      "devicePixelRatio": 2,
+      "isCoarsePointer": false,
+      "isHoveringCanvas": false,
+      "openMenus": [],
+      "isChangingStyle": false,
+      "isReadonly": false,
+      "meta": {},
+      "currentPageId": "page:page",
+      "insets": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "id": "instance:instance",
+      "typeName": "instance"
+    },
+    {
+      "x": 289.6875,
+      "y": 232.01171875,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "grey",
+        "size": "m",
+        "w": 188.203125,
+        "text": "HTTP Operations",
+        "font": "sans",
+        "align": "start",
+        "autoSize": true,
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "a1",
+      "id": "shape:IRQAF7_KClAfO5kuPS4B3",
+      "typeName": "shape"
+    },
+    {
+      "x": 290,
+      "y": 270,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "black",
+        "size": "s",
+        "w": 348.0812237230523,
+        "text": "GET | POST | DELETE",
+        "font": "mono",
+        "align": "start",
+        "autoSize": false,
+        "scale": 1.1491570723684208
+      },
+      "parentId": "page:page",
+      "index": "a2",
+      "id": "shape:YFEV6TDSTTj8cAD1qg-aL",
+      "typeName": "shape"
+    },
+    {
+      "x": 410,
+      "y": 340,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "geo",
+      "props": {
+        "w": 140.00000000000009,
+        "h": 56.296875,
+        "geo": "rectangle",
+        "color": "light-blue",
+        "labelColor": "black",
+        "fill": "solid",
+        "dash": "draw",
+        "size": "s",
+        "font": "sans",
+        "text": "Server",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "growY": 0,
+        "url": ""
+      },
+      "parentId": "page:page",
+      "index": "a3",
+      "id": "shape:6Mz1HBOtJCRspDaUBmeZO",
+      "typeName": "shape"
+    },
+    {
+      "x": 290,
+      "y": 360,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "arrow",
+      "parentId": "page:page",
+      "index": "a4",
+      "props": {
+        "dash": "draw",
+        "size": "s",
+        "fill": "none",
+        "color": "black",
+        "labelColor": "black",
+        "bend": 0,
+        "start": {
+          "type": "point",
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "type": "point",
+          "x": 100.92639521021289,
+          "y": 1.0429537848258974
+        },
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "text": "",
+        "font": "sans"
+      },
+      "id": "shape:-c-DRNYupRV2f6EpL80Ub",
+      "typeName": "shape"
+    },
+    {
+      "x": 310,
+      "y": 330,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "black",
+        "size": "s",
+        "w": 69.03603044405158,
+        "text": "GET /key",
+        "font": "mono",
+        "align": "middle",
+        "autoSize": true,
+        "scale": 0.7898294509151415
+      },
+      "parentId": "page:page",
+      "index": "a5",
+      "id": "shape:MA57tXxpGBchwvu8DvVwg",
+      "typeName": "shape"
+    },
+    {
+      "x": 390,
+      "y": 380,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "arrow",
+      "parentId": "page:page",
+      "index": "a6",
+      "props": {
+        "dash": "draw",
+        "size": "s",
+        "fill": "none",
+        "color": "black",
+        "labelColor": "black",
+        "bend": 0,
+        "start": {
+          "type": "point",
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "type": "point",
+          "x": -98.88393988935627,
+          "y": -0.9331553420625482
+        },
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "text": "",
+        "font": "sans"
+      },
+      "id": "shape:-OxQLR5SIN2b2pouQ4DOP",
+      "typeName": "shape"
+    },
+    {
+      "x": 316.72852209658714,
+      "y": 390,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "black",
+        "size": "s",
+        "w": 45.87889330682571,
+        "text": "Value",
+        "font": "mono",
+        "align": "middle",
+        "autoSize": true,
+        "scale": 0.8341616964877402
+      },
+      "parentId": "page:page",
+      "index": "a7",
+      "id": "shape:LC3URgpvbJhwxpKUE-a8j",
+      "typeName": "shape"
+    },
+    {
+      "x": 220,
+      "y": 350,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "black",
+        "size": "s",
+        "w": 49.3359375,
+        "text": "Client",
+        "font": "sans",
+        "align": "middle",
+        "autoSize": true,
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "a9",
+      "id": "shape:I5ZcL3BCugbCzG4waMOGW",
+      "typeName": "shape"
+    },
+    {
+      "x": 220,
+      "y": 450,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "black",
+        "size": "s",
+        "w": 576.6796875,
+        "text": "1. axum to handle http operations\n2. core data structure is a btreemap\n3. needs a cli to boot up the server so use clap.rs or something better?",
+        "font": "sans",
+        "align": "start",
+        "autoSize": true,
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "aA",
+      "id": "shape:Le8AVoHeXFf9jdpJX-T1q",
+      "typeName": "shape"
+    },
+    {
+      "x": 230,
+      "y": 560,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "black",
+        "size": "s",
+        "w": 510,
+        "text": "/// App state which stores all keys and values.\nstruct AppState {\n    store: Mutex<BTreeMap<String, String>>,\n}",
+        "font": "mono",
+        "align": "start",
+        "autoSize": false,
+        "scale": 0.9712392769607843
+      },
+      "parentId": "page:page",
+      "index": "aB",
+      "id": "shape:2KorhGmPFGR6sYoseQ0YY",
+      "typeName": "shape"
+    },
+    {
+      "x": 210,
+      "y": 540,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "geo",
+      "props": {
+        "w": 539.9999999999999,
+        "h": 130,
+        "geo": "rectangle",
+        "color": "light-blue",
+        "labelColor": "black",
+        "fill": "solid",
+        "dash": "draw",
+        "size": "s",
+        "font": "mono",
+        "text": "",
+        "align": "start",
+        "verticalAlign": "middle",
+        "growY": 0,
+        "url": ""
+      },
+      "parentId": "page:page",
+      "index": "aAV",
+      "id": "shape:Z3P5qERw-ABixPdR1zqAL",
+      "typeName": "shape"
+    },
+    {
+      "x": 210,
+      "y": 750,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "arrow",
+      "parentId": "page:page",
+      "index": "aC",
+      "props": {
+        "dash": "draw",
+        "size": "s",
+        "fill": "semi",
+        "color": "black",
+        "labelColor": "black",
+        "bend": 54.07064606669558,
+        "start": {
+          "type": "point",
+          "x": -22.625,
+          "y": 4.87890625
+        },
+        "end": {
+          "type": "point",
+          "x": 153.35786489993848,
+          "y": -100.39521642212719
+        },
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "text": "",
+        "font": "mono"
+      },
+      "id": "shape:VVuO5FZPukpilT53baRFI",
+      "typeName": "shape"
+    },
+    {
+      "x": -100,
+      "y": 700,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "black",
+        "size": "s",
+        "w": 476.203125,
+        "text": "This enables mutual exclusion.\n(hint, what happens when it is distributed?)",
+        "font": "mono",
+        "align": "start",
+        "autoSize": true,
+        "scale": 0.6929815926764445
+      },
+      "parentId": "page:page",
+      "index": "aD",
+      "id": "shape:KgcY8HpLcRc5tEdZd_jyc",
+      "typeName": "shape"
+    },
+    {
+      "x": 237.04977088168445,
+      "y": 802.9093183155336,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "light-blue",
+        "size": "m",
+        "w": 8,
+        "text": "",
+        "font": "mono",
+        "align": "start",
+        "autoSize": true,
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "aE",
+      "id": "shape:ogrZ94A4rmJshB-tXehA6",
+      "typeName": "shape"
+    },
+    {
+      "x": 210,
+      "y": 790,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "light-blue",
+        "size": "m",
+        "w": 274.6015625,
+        "text": "HashMap vs BTreeMap",
+        "font": "mono",
+        "align": "start",
+        "autoSize": true,
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "aF",
+      "id": "shape:cAVVa0ZsoukxAHBVDIY07",
+      "typeName": "shape"
+    },
+    {
+      "x": 183.3224741552342,
+      "y": 854.9019538035061,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "light-blue",
+        "size": "m",
+        "w": 375.40625,
+        "text": "1. TCP over HTTP, why not?\n2.",
+        "font": "mono",
+        "align": "start",
+        "autoSize": true,
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "aG",
+      "id": "shape:XAN3xsSL18fqypFKoMoNd",
+      "typeName": "shape"
+    },
+    {
+      "x": 187.830233291958,
+      "y": 983.6621994065505,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "light-blue",
+        "size": "m",
+        "w": 260.203125,
+        "text": "Write Ahead Log\n\nClient A  Client B",
+        "font": "mono",
+        "align": "start",
+        "autoSize": true,
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "aH",
+      "id": "shape:h1AZ3UrjtlL3lgZaD6g8i",
+      "typeName": "shape"
+    },
+    {
+      "x": 225.43816095881425,
+      "y": 1111.755721472357,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "type": "text",
+      "props": {
+        "color": "light-blue",
+        "size": "m",
+        "w": 908.203125,
+        "text": "transactionA\ntransactionB\n\non account of either a node / server going down, we can replay \nthe events from the log.",
+        "font": "mono",
+        "align": "start",
+        "autoSize": true,
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "aI",
+      "id": "shape:aum5UJXL18A8NeTZ19jUp",
+      "typeName": "shape"
+    }
+  ]
+}
