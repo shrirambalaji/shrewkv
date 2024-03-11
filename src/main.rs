@@ -1,7 +1,8 @@
 mod cli;
+mod client;
 mod core;
 mod server;
 
-fn main() -> std::io::Result<()> {
-    server::start()
+fn main() {
+    cli::start();
 }
