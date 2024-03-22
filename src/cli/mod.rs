@@ -13,6 +13,8 @@ struct Args {
 enum Commands {
     Start {},
     Ping {},
+    Set { key: String, value: String },
+    Get { key: String },
 }
 
 pub fn start() {
@@ -20,6 +22,9 @@ pub fn start() {
     match &args.command {
         Some(Commands::Start {}) => Some(server::start()),
         Some(Commands::Ping {}) => Some(client::ping()),
-        None => None,
+        Some(Commands::Set { key, value }) => Some(client::set(key.to_owned(), value.to_owned())),
+        Some(Commands::Get { key }) => Some(client::get(key.to_owned())),
+        // start the server even if there are no commands for now
+        None => Some(server::start()),
     };
 }
