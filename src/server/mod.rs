@@ -1,7 +1,8 @@
-use crate::core::ShrewDB;
+use crate::{core::ShrewDB, utils::parse_key_from_request};
 use colored::Colorize;
 use ntex::web::{self};
 use once_cell::sync::Lazy;
+use serde::{Deserialize, Serialize};
 use std::sync::Mutex;
 
 static DB: Lazy<Mutex<ShrewDB<String, String>>> = Lazy::new(|| Mutex::new(ShrewDB::new()));
@@ -14,27 +15,46 @@ async fn ping() -> impl web::Responder {
     web::HttpResponse::Ok().body("PONG")
 }
 
-// TODO: Add POST /set/{key}
+#[derive(Deserialize, Serialize)]
+pub struct SetRequestBody {
+    pub value: String,
+}
 
 #[web::get("/get/{key}")]
 async fn get(req: web::HttpRequest) -> impl web::Responder {
+    dbg!(&req);
     let db = DB.lock().unwrap();
-    let key: String = req.match_info().get("key").unwrap().parse().unwrap();
-    let result = db.get(key);
-    web::HttpResponse::Ok().body(format!("Searching for {:?}", result))
+    // let key: String = parse_key_from_request(&req);
+    let key: String = parse_key_from_request(&req);
+    let result = db.get(key.clone());
+    match result {
+        Some(value) => web::HttpResponse::Ok().json(&value),
+        None => web::HttpResponse::NotFound().body("not found"),
+    }
+}
+
+#[web::put("/set/{key}")]
+async fn set(req: web::HttpRequest, body: web::types::Json<SetRequestBody>) -> impl web::Responder {
+    dbg!(&req);
+    let mut db = DB.lock().unwrap();
+    let key = parse_key_from_request(&req);
+    // is there a better way to do this?
+    let result = db.put(key, body.value.to_string());
+    web::HttpResponse::Ok().body(format!("Setting {:?}", result))
 }
 
 #[ntex::main]
 pub async fn start() -> std::io::Result<()> {
     let welcome = r"
-   ______ _____  _____      _____  ___ 
+   ______ _____  _____      _____  ___
   / __/ // / _ \/ __| | /| / / _ \/ _ )
  _\ \/ _  / , _/ _/ | |/ |/ / // / _  |
-/___/_//_/_/|_/___/ |__/|__/____/____/ 
-                                       
+/___/_//_/_/|_/___/ |__/|__/____/____/
+
 ";
     print!("{}", welcome.cyan());
     println!("starting shrewdb server at: {}", ENDPOINT.white().bold());
+    // TODO: handle error when PORT is busy.
     web::HttpServer::new(|| web::App::new().service(ping).service(get))
         .bind(ENDPOINT)?
         .run()
