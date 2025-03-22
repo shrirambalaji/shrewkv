@@ -23,7 +23,7 @@ pub struct SetRequestBody {
 #[web::get("/get/{key}")]
 async fn get(req: web::HttpRequest) -> impl web::Responder {
     dbg!(&req);
-    let db = DB.lock().unwrap();
+    let mut db = DB.lock().unwrap();
     // let key: String = parse_key_from_request(&req);
     let key: String = parse_key_from_request(&req);
     let result = db.get(key.clone());
@@ -36,10 +36,10 @@ async fn get(req: web::HttpRequest) -> impl web::Responder {
 #[web::put("/set/{key}")]
 async fn set(req: web::HttpRequest, body: web::types::Json<SetRequestBody>) -> impl web::Responder {
     dbg!(&req);
-    let mut db = DB.lock().unwrap();
+    let db = DB.lock().unwrap();
     let key = parse_key_from_request(&req);
     // is there a better way to do this?
-    let result = db.put(key, body.value.to_string());
+    let result = db.set(key, body.value.to_string());
     web::HttpResponse::Ok().body(format!("Setting {:?}", result))
 }
 
