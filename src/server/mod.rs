@@ -1,11 +1,11 @@
-use crate::{core::ShrewDB, utils::parse_key_from_request};
+use crate::{core::ShrewKV, utils::parse_key_from_request};
 use colored::Colorize;
 use ntex::web::{self};
 use once_cell::sync::Lazy;
 use serde::{Deserialize, Serialize};
 use std::sync::Mutex;
 
-static DB: Lazy<Mutex<ShrewDB<String, String>>> = Lazy::new(|| Mutex::new(ShrewDB::new()));
+static DB: Lazy<Mutex<ShrewKV<String, String>>> = Lazy::new(|| Mutex::new(ShrewKV::new()));
 
 pub static ENDPOINT: &str = "127.0.0.1:6789";
 
@@ -46,14 +46,10 @@ async fn set(req: web::HttpRequest, body: web::types::Json<SetRequestBody>) -> i
 #[ntex::main]
 pub async fn start() -> std::io::Result<()> {
     let welcome = r"
-   ______ _____  _____      _____  ___
-  / __/ // / _ \/ __| | /| / / _ \/ _ )
- _\ \/ _  / , _/ _/ | |/ |/ / // / _  |
-/___/_//_/_/|_/___/ |__/|__/____/____/
-
+   ShrewKV 
 ";
     print!("{}", welcome.cyan());
-    println!("starting shrewdb server at: {}", ENDPOINT.white().bold());
+    println!("starting ShrewKV server at: {}", ENDPOINT.white().bold());
     // TODO: handle error when PORT is busy.
     web::HttpServer::new(|| web::App::new().service(ping).service(get))
         .bind(ENDPOINT)?

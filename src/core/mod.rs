@@ -2,19 +2,19 @@
 
 use std::collections::BTreeMap;
 
-pub struct ShrewDB<K, V>
+pub struct ShrewKV<K, V>
 where
     K: Ord,
 {
     btree_map: BTreeMap<K, V>,
 }
 
-impl<K, V> ShrewDB<K, V>
+impl<K, V> ShrewKV<K, V>
 where
     K: Ord,
 {
     pub fn new() -> Self {
-        ShrewDB {
+        ShrewKV {
             btree_map: BTreeMap::new(),
         }
     }
@@ -39,7 +39,7 @@ mod tests {
 
     #[test]
     fn test_put_get() {
-        let mut data_store = ShrewDB::new();
+        let mut data_store = ShrewKV::new();
         data_store.put("key1", "value1");
         data_store.put("key2", "value2");
         assert_eq!(data_store.get(&"key1"), Some(&"value1"));
@@ -48,7 +48,7 @@ mod tests {
 
     #[test]
     fn test_contains() {
-        let mut data_store = ShrewDB::new();
+        let mut data_store = ShrewKV::new();
         data_store.put("key1", "value1");
         assert_eq!(data_store.contains("key1"), true);
         assert_eq!(data_store.contains("key2"), false);
@@ -56,7 +56,7 @@ mod tests {
 
     #[test]
     fn test_put_override() {
-        let mut data_store = ShrewDB::new();
+        let mut data_store = ShrewKV::new();
         data_store.put("key1", "value1");
         assert_eq!(data_store.put("key1", "value2"), Some("value1"));
         assert_eq!(data_store.get(&"key1"), Some(&"value2"));

@@ -7,7 +7,7 @@ pub async fn ping() -> std::io::Result<()> {
     let client = Client::default();
     let mut response = client
         .get(format!("http://{}/ping", server::ENDPOINT))
-        .header("User-Agent", "shrewdb-cli")
+        .header("User-Agent", "shrewkv-cli")
         .send()
         .await
         .unwrap();
@@ -26,7 +26,7 @@ pub async fn set(key: String, value: String) -> std::io::Result<()> {
     };
     let mut response = client
         .put(format!("http://{}/set/{}", server::ENDPOINT, key))
-        .header("User-Agent", "shrewdb-cli")
+        .header("User-Agent", "shrewkv-cli")
         .send_json(&json!(payload))
         .await
         .unwrap();
@@ -41,7 +41,7 @@ pub async fn get(key: String) -> std::io::Result<()> {
     let client = Client::default();
     let mut response = client
         .get(format!("http://{}/get/{}", server::ENDPOINT, key))
-        .header("User-Agent", "shrewdb-cli")
+        .header("User-Agent", "shrewkv-cli")
         .send()
         .await
         .unwrap();
